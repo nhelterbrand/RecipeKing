@@ -6,6 +6,11 @@
     android:background="@color/yellow"
     android:gravity="center_horizontal">
 
+    <ImageView
+        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:src="@drawable/kingCrown" />
+
     <!-- Header Text for App -->
     <TextView
         android:layout_width="fill_parent"
@@ -14,22 +19,26 @@
         android:gravity="center"
         android:textSize="44sp"
         android:textAlignment="center"
-        android:textAllCaps="true"/>
+        android:textAllCaps="true"
+        android:typeface="sans"
+        android:textStyle="italic"/>
 
     <!--  Button to view all recipe screen -->
     <Button android:id="@+id/btnViewProducts"
-        android:layout_width="fill_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="@string/menuViewAll"
-        android:background="@color/green"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
         android:layout_marginTop="25dip"/>
 
     <!--  Button to create a new recipe screen -->
     <Button android:id="@+id/btnCreateProduct"
-        android:layout_width="fill_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="@string/menuAddNew"
-        android:background="@color/green"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
         android:layout_marginTop="25dip"/>
 
     <!-- Button to search for a recipe screen -->
@@ -37,8 +46,10 @@
         android:id="@+id/btnSearchRecipe"
         android:text="@string/menuSearch"
         android:layout_marginTop="25dip"
-        android:layout_width="fill_parent"
-        android:background="@color/green"
+        android:layout_width="300dp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
         android:layout_height="wrap_content" />
 
 
