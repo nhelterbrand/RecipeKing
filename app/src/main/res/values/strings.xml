@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Recipe King</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="menuViewAll">View Recipes</string>
+    <string name="menuAddNew">Add New Recipe</string>
+    <string name="menuSearch">Search For Recipe</string>
+    <string name="menuHeader">Recipe King</string>
+
+    <color name="green">#269926</color>
+    <color name="yellow">#B9F73E</color>
+
+</resources>
