@@ -71,8 +71,11 @@ public class AllRecipesActivity extends ListActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // getting values from selected ListItem
-                String pid = ((TextView) view.findViewById(R.id.pid)).getText()
-                        .toString();
+                TextView pidTextView;
+
+                pidTextView = ((TextView) view.findViewById(R.id.pid));
+
+                String pid = pidTextView.getText().toString();
 
                 // Starting new intent
                 Intent in = new Intent(getApplicationContext(),
@@ -82,6 +85,7 @@ public class AllRecipesActivity extends ListActivity {
 
                 // starting new activity and expecting some response back
                 startActivityForResult(in, 100);
+
             }
         });
 
