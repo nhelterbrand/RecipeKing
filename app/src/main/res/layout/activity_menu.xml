@@ -6,10 +6,12 @@
     android:background="@color/yellow"
     android:gravity="center_horizontal">
 
+    <!-- Crown Image for Logo -->
     <ImageView
+        android:contentDescription="@string/app_name"
         android:layout_height="150dp"
         android:layout_width="150dp"
-        android:src="@drawable/kingCrown" />
+        android:src="@drawable/king_crown" />
 
     <!-- Header Text for App -->
     <TextView

@@ -8,11 +8,12 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
         android:paddingTop="10dip"
-        android:textSize="17dip"
-        android:text="Search For Recipe"/>
+        android:textSize="17sp"
+        android:text="@string/searchTextLabel"/>
 
     <EditText
         android:layout_width="fill_parent"
@@ -20,12 +21,14 @@
         android:id="@+id/searchName"/>
 
     <Button
-        android:layout_width="fill_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dip"
+        android:padding="10dp"
+        android:layout_gravity="center"
         android:id="@+id/searchButton"
-        android:background="@color/green"
-        android:onClick="onSearchButtonClicked"
-        android:text="Search"/>
+        android:text="@string/searchButton"
+        android:background="@drawable/rounded_button" />
 
 
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.example.recipeking.app;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import android.app.Activity;
@@ -10,7 +11,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
-public class MenuActivity extends ActionBarActivity {
+public class MenuActivity extends Activity {
 
     Button btnViewProducts;
     Button btnNewProduct;
@@ -60,6 +61,13 @@ public class MenuActivity extends ActionBarActivity {
                 startActivity(i);
             }
         });
+    }
+
+    public boolean onCreateMenuOptions(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.activity_menu_actions, menu);
+
+        return super.onCreateOptionsMenu(menu);
     }
 
 }

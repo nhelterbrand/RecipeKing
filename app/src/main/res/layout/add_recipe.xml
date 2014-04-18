@@ -95,11 +95,15 @@
         android:lines="4"
         android:gravity="top"/>
 
-    <!-- Button Create Product -->
-    <Button android:id="@+id/btnCreateProduct"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/green"
-        android:text="Create Product"/>
+    <!-- Button to search for a recipe screen -->
+    <Button
+        android:id="@+id/btnCreateProduct"
+        android:text="@string/btnAddText"
+        android:layout_marginTop="25dip"
+        android:layout_width="300dp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
