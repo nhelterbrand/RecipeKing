@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow">
+
+    <!-- header -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registerHeader"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <!-- name label -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registerNameLabel"
+        />
+
+    <!-- name text box -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerName"
+        android:inputType="textPersonName"
+        />
+
+    <!-- email label -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registerEmailLabel"
+        />
+
+    <!-- email text box -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:id="@+id/registerEmail"/>
+
+    <!-- password label -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registerPasswordLabel"
+        />
+
+    <!-- password text box -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/registerPassword"
+        />
+
+    <!-- Error Message -->
+    <TextView android:id="@+id/register_error"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:layout_marginTop="25dip"
+        />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registerButtonText"
+        android:background="@color/green"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLinkToLogin"
+        android:text="@string/registerTextToLogin"
+        android:background="@null"
+        />
+
+</LinearLayout>

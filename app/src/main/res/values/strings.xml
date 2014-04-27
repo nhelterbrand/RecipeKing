@@ -3,6 +3,7 @@
     <!-- colors for the app -->
     <color name="green">#269926</color>
     <color name="yellow">#B9F73E</color>
+    <color name="red">#e30000</color>
 
     <!-- Strings for Menu -->
     <string name="app_name">Recipe King</string>
@@ -20,5 +21,20 @@
     <string name="searchButton">Search For Recipe</string>
     <string name="searchTextLabel">Please Enter Recipe Name</string>
     <string name="searchTextHint">something like "guacamole dip" would do well</string>
+
+    <!-- Login Activity Strings -->
+    <string name="loginHeader">Recipe King Login</string>
+    <string name="loginEmailLabel">Email</string>
+    <string name="loginPasswordLabel">Password</string>
+    <string name="loginButtonText">Login</string>
+    <string name="loginTextToRegister">No Account? Create an Account!</string>
+
+    <!-- Registration Activity Strings -->
+    <string name="registerHeader">Recipe King Register</string>
+    <string name="registerEmailLabel">Email</string>
+    <string name="registerNameLabel">Name</string>
+    <string name="registerPasswordLabel">Password</string>
+    <string name="registerButtonText">Register</string>
+    <string name="registerTextToLogin">Already have an account? Login!</string>
 
 </resources>
