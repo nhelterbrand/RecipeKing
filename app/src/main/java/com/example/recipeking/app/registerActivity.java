@@ -1,12 +1,11 @@
 package com.example.recipeking.app;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.example.recipeking.app.UserFunctions;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -17,26 +16,26 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Created by nate on 4/15/14.
+ * Created by nate on 4/30/14.
  */
-@SuppressLint("NewApi")
-public class AddRecipesActivity extends Activity {
-
+public class registerActivity extends Activity{
     // Progress Dialog
     private ProgressDialog pDialog;
 
     JSONParser jsonParser = new JSONParser();
     EditText inputName;
-    Integer inputRate;
-
-    EditText inputDesc;
-
+    EditText inputEmail;
+    EditText inputPassword;
     // url to create new product
-    private static String url_create_product = "http://web.engr.illinois.edu/~andatajunkies/android_connect/create_product.php";
+    private static String url_register_user = "http://web.engr.illinois.edu/~andatajunkies/android_connect/register_user.php";
 
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
@@ -44,55 +43,32 @@ public class AddRecipesActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_recipe);
+        setContentView(R.layout.register);
 
         // Edit Text
-        inputName = (EditText) findViewById(R.id.inputName);
-        inputRate = 1;
-        inputDesc = (EditText) findViewById(R.id.inputDesc);
+        inputName = (EditText) findViewById(R.id.registerName);
+        inputEmail = (EditText) findViewById(R.id.registerEmail);
+        inputPassword = (EditText) findViewById(R.id.registerPassword);
 
         // Create button
-        Button btnCreateProduct = (Button) findViewById(R.id.btnCreateProduct);
+        Button btnRegisterUser = (Button) findViewById(R.id.btnRegister);
 
         // button click event
-        btnCreateProduct.setOnClickListener(new View.OnClickListener() {
+        btnRegisterUser.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 // creating new product in background thread
-                new CreateNewProduct().execute();
+                new RegisterUser().execute();
             }
         });
-    }
-
-    public void onRateRadioClicked(View view) {
-        //is button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch(view.getId()) {
-            case R.id.rateOne:
-                if (checked) inputRate = 1;
-                break;
-            case R.id.rateTwo:
-                if (checked) inputRate = 2;
-                break;
-            case R.id.rateThree:
-                if (checked) inputRate = 3;
-                break;
-            case R.id.rateFour:
-                if (checked) inputRate = 4;
-                break;
-            case R.id.rateFive:
-                if (checked) inputRate = 5;
-                break;
-        }
     }
 
     /**
      * Background Async Task to Create new product
      * */
     @SuppressLint("NewApi")
-    class CreateNewProduct extends AsyncTask<String, String, String> {
+    class RegisterUser extends AsyncTask<String, String, String> {
 
         /**
          * Before starting background thread Show Progress Dialog
@@ -100,8 +76,8 @@ public class AddRecipesActivity extends Activity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(AddRecipesActivity.this);
-            pDialog.setMessage("Creating Recipe..");
+            pDialog = new ProgressDialog(registerActivity.this);
+            pDialog.setMessage("Registering You..");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
             pDialog.show();
@@ -112,23 +88,23 @@ public class AddRecipesActivity extends Activity {
          * */
         protected String doInBackground(String... args) {
             String name = inputName.getText().toString();
-            String rate = inputRate.toString();
-            String description = inputDesc.getText().toString();
+            String rate = inputEmail.getText().toString();
+            String description = inputPassword.getText().toString();
 
 
             // Building Parameters
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("name", name));
-            params.add(new BasicNameValuePair("rate", rate));
-            params.add(new BasicNameValuePair("description", description));
+            params.add(new BasicNameValuePair("email", rate));
+            params.add(new BasicNameValuePair("password", description));
 
             // getting JSON Object
             // Note that create product url accepts POST method
-            JSONObject json = jsonParser.makeHttpRequest(url_create_product,
+            JSONObject json = jsonParser.makeHttpRequest(url_register_user,
                     "POST", params);
 
             // check log cat fro response
-            Log.d("Create Response", json.toString());
+            Log.d("Register Response", json.toString());
 
             // check for success tag
             try {
@@ -136,13 +112,11 @@ public class AddRecipesActivity extends Activity {
 
                 if (success == 1) {
                     // successfully created product
-                    Intent i = new Intent(getApplicationContext(), AllRecipesActivity.class);
+                    Intent i = new Intent(getApplicationContext(), MenuActivity.class);
                     startActivity(i);
 
                     // closing this screen
                     finish();
-                } else {
-                    // failed to create product
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

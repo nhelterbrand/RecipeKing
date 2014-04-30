@@ -2,26 +2,51 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.recipeking.app" >
 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
-        
-    </uses-permission>
-
     <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        
+        android:icon="@drawable/king_crown"
+        android:label="@string/app_name">
+
         <activity
-            android:name="com.example.recipeking.app.MenuActivity"
+            android:name="com.example.recipeking.app.loginActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.example.recipeking.app.registerActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.example.recipeking.app.MenuActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".AllRecipesActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".AddRecipesActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".EditRecipesActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".SearchRecipeActivity"
+            android:label="@string/app_name">
+        </activity>
        
     </application>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

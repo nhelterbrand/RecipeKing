@@ -42,13 +42,13 @@ public class EditRecipesActivity extends Activity{
     JSONParser jsonParser = new JSONParser();
 
     // single product url
-    private static final String url_product_detials = "http://web.engr.illinois.edu/~jhudzik2/android_connect/get_product_details.php";
+    private static final String url_product_details = "http://web.engr.illinois.edu/~andatajunkies/android_connect/get_product_details.php";
 
     // url to update product
-    private static final String url_update_product = "http://web.engr.illinois.edu/~jhudzik2/android_connect/update_product.php";
+    private static final String url_update_product = "http://web.engr.illinois.edu/~andatajunkies/android_connect/update_product.php";
 
     // url to delete product
-    private static final String url_delete_product = "http://web.engr.illinois.edu/~jhudzik2/android_connect/delete_product.php";
+    private static final String url_delete_product = "http://web.engr.illinois.edu/~andatajunkies/android_connect/delete_product.php";
 
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
@@ -136,7 +136,7 @@ public class EditRecipesActivity extends Activity{
                         // getting product details by making HTTP request
                         // Note that product details url will use GET request
                         JSONObject json = jsonParser.makeHttpRequest(
-                                url_product_detials, "GET", params);
+                                url_product_details, "GET", params);
 
                         // check your log for json response
                         Log.d("Single Product Details", json.toString());
