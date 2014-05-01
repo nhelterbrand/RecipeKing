@@ -13,9 +13,9 @@ $validPassword = isset($_POST["password"]) && !empty($_POST["password"]);
 
 if ($validName && $validEmail && $validPassword) {
 	//assign values
-	$name = $_POST["name"];
-	$email = $_POST["email"];
-	$password = $_POST["password"];
+	$name = mysql_escape_string($_POST["name"]);
+	$email = mysql_escape_string($_POST["email"]);
+	$password = mysql_escape_string($_POST["password"]);
 
 	//connect to the database
 	require_once "db_connect.php";

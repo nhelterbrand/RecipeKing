@@ -20,6 +20,24 @@
         android:layout_height="wrap_content"
         android:id="@+id/searchName"/>
 
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ingredients"/>
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+    </RadioGroup>
+
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"

@@ -34,7 +34,7 @@ public class SearchRecipeActivity extends Activity {
     String pid;
 
     //url to search for a recipe
-    private static String url_search_product = "http://web.engr.illinois.edu/~jhudzik2/android_connect/search_product.php";
+    private static String url_search_product = "http://web.engr.illinois.edu/~andatajunkies/android_connect/search_product.php";
 
     // JSON Node names
     private static final String TAG_SUCCESS = "success";

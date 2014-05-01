@@ -54,6 +54,16 @@
         android:background="@drawable/rounded_button"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop ="25dip"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="@string/menuLogout"
+        android:id="@+id/btnLogout"
+        />
+
 
 
 </LinearLayout>

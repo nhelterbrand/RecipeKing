@@ -13,6 +13,7 @@
     <string name="menuAddNew">Add New Recipe</string>
     <string name="menuSearch">Search By Ingredients</string>
     <string name="menuHeader">Recipe King</string>
+    <string name="menuLogout">Logout</string>
 
     <!-- Add Recipes Activity Strings -->
     <string name="btnAddText">Add Recipe</string>
@@ -32,8 +33,11 @@
     <!-- Registration Activity Strings -->
     <string name="registerHeader">Recipe King Register</string>
     <string name="registerEmailLabel">Email</string>
+    <string name="registerEmailHint">Your Email, ex john@doe.com</string>
     <string name="registerNameLabel">Name</string>
+    <string name="registerNameHint">Your Full Name</string>
     <string name="registerPasswordLabel">Password</string>
+    <string name="registerPasswordHint">Password</string>
     <string name="registerButtonText">Register</string>
     <string name="registerTextToLogin">Already have an account? Login!</string>
 
